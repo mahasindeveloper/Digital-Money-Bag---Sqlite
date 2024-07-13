@@ -5,9 +5,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.widget.Toast;
-
-import androidx.annotation.Nullable;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -20,6 +17,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public DatabaseHelper(Context context) {
         super(context, "digital_moneybag", null, 1);
     }
+
+    ///Hello
 
     @Override
      public void onCreate(SQLiteDatabase db) {
@@ -81,7 +80,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         Double TotalExpense = (double) 0;
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor=db.rawQuery("select * from expense",null);
+        Cursor cursor=db.rawQuery("select * from expense", null);
 
         if (cursor != null && cursor.getCount()>0 ){
 
